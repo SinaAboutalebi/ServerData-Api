@@ -64,7 +64,7 @@ To get a local copy up and running follow these simple example steps.
 
 2. Clone the repo
    ```sh
-   git clone https://github.com/Zer0Power/PlayerData-Api.git
+   git clone https://github.com/Zer0Power/ServerData-Api.git
    ```
 3. Install NPM packages
    ```sh
@@ -78,5 +78,12 @@ To get a local copy up and running follow these simple example steps.
     "server2":"185.141.133.16"
     }
    ```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- ROADMAP -->
+## Roadmap
+
+See the [open issues](https://github.com/Zer0Power/PlayerData-Api/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
