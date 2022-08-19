@@ -84,7 +84,7 @@ To get a local copy up and running follow these simple example steps.
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/Zer0Power/PlayerData-Api/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/Zer0Power/ServerData-Api/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -115,6 +115,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 ## Contact
 
 
-Project Link: [https://github.com/Zer0Power/PlayerData-Api](https://github.com/Zer0Power/PlayerData-Api)
+Project Link: [https://github.com/Zer0Power/ServerData-Api](https://github.com/Zer0Power/ServerData-Api)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
