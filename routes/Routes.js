@@ -18,6 +18,7 @@ router.get("/servers", async (req, res) => {
     return server1Data.data.response;
   }
   const server1Data = await GetFirstServerData();
+  if (server1Data.length < 20) return res.status(500)
   const response1 = server1Data.servers.map((server) => {
     const server1 = {};
     server1.port = server.gameport;
@@ -42,6 +43,7 @@ router.get("/servers", async (req, res) => {
     return server2Data.data.response;
   }
   const server2Data = await GetSecondServerData();
+  if (server2Data.length < 20) return res.status(500)
   const response2 = server2Data.servers.map((server) => {
     const server2 = {};
     server2.port = server.gameport;
