@@ -42,3 +42,10 @@
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+<img src="images/screenshot.png" alt="ScreenShot">
+
+<p align="right">(<a href="#top">back to top</a>)</p>
