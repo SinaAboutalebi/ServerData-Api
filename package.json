@@ -1,0 +1,28 @@
+{
+  "name": "serverdata-api",
+  "version": "1.0.0",
+  "description": "Get CS:GO ServersList Running On VPS",
+  "main": "main.js",
+  "scripts": {
+    "test": "nodemon main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zer0Power/ServerData-Api.git"
+  },
+  "keywords": [
+    "CS:GOservers-Api"
+  ],
+  "author": "Zer0Power",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Zer0Power/ServerData-Api/issues"
+  },
+  "homepage": "https://github.com/Zer0Power/ServerData-Api#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1"
+  }
+}
