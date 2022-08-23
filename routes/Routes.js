@@ -126,8 +126,7 @@ router.get("/ports", async (req, res) => {
   res.status(200).json(data);
 });
 
-
-router.get('/counts',async (req,res)=>{
+router.get("/counts", async (req, res) => {
   const data = {};
 
   async function GetFirstServerData() {
@@ -189,7 +188,7 @@ router.get('/counts',async (req,res)=>{
   data.vps2Players = server2players;
 
   res.status(200).json(data);
-})
+});
 
 module.exports = router;
 //---------------------------💔🚬 'Zer0Power 💔🚬---------------------------//
