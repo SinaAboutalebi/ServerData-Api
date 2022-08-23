@@ -67,5 +67,64 @@ router.get("/servers", async (req, res) => {
   res.status(200).json(data);
 });
 
+router.get('/ports',async (req, res)=>{
+  const data = {}
+
+
+  async function GetFirstServerData() {
+    const options = {
+      method: "get",
+      url:
+        `https://api.steampowered.com/IGameServersService/GetServerList/v1/?key=${
+          config.api
+        }&filter=addr${"\\"}` + config.server1
+    };
+    let server1Data = await axios(options);
+    return server1Data.data.response;
+  }
+  const server1Data = await GetFirstServerData();
+  if (!server1Data.servers) return res.status(500).json({message : "Servers Are Down"})
+
+  const response1 = server1Data.servers.map((server) => {
+    const server1 = {};
+    server1.port = server.gameport;
+    return server1;
+
+  });
+  const result1 = [];
+  response1.forEach((server) => result1.push(server.port));
+  //===================================================================//
+
+  async function GetSecondServerData() {
+    const options = {
+      method: "get",
+      url:
+        `https://api.steampowered.com/IGameServersService/GetServerList/v1/?key=${
+          config.api
+        }&filter=addr${"\\"}` + config.server2
+    };
+    let server2Data = await axios(options);
+    return server2Data.data.response;
+  }
+  const server2Data = await GetSecondServerData();
+  if (!server2Data.servers) return res.status(500).json({message : "Servers Are Down"})
+
+  const response2 = server2Data.servers.map((server) => {
+    const server2 = {};
+    server2.port = server.gameport;
+    return server2;
+
+  });
+  const result2 = [];
+  response2.forEach((server) => result2.push(server.port));
+  //===================================================================//
+
+
+  data.vps1Ports = result1
+  data.vps2Ports = result2
+
+  res.status(200).json(data);
+})
+
 module.exports = router;
 //---------------------------💔🚬 'Zer0Power 💔🚬---------------------------//
