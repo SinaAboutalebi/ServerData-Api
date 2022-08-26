@@ -74,8 +74,8 @@ To get a local copy up and running follow these simple example steps.
    ```json
    {
     "api":"API_KEY",
-    "server1":"185.141.104.39",//Ur ServerIP
-    "server2":"185.141.133.16"//Ur ServerIP
+    "server1":"185.141.104.39",//Your ServerIP
+    "server2":"185.141.133.16"//Your ServerIP
     }
    ```
 
