@@ -14,10 +14,11 @@ router.get("/servers", async (req, res) => {
           config.api
         }&filter=addr${"\\"}` + config.server1,
     };
-    let server1Data = await axios(options).catch((reason)=> {
+    let server1Data = await axios(options).catch((reason) => {
       if (reason.response.status === 502) {
-        res.status(502).json({message:"Steam Bad Gateway"})
-      }})
+        res.status(502).json({ message: "Steam Bad Gateway" });
+      }
+    });
     return server1Data.data.response;
   }
   const server1Data = await GetFirstServerData();
@@ -43,10 +44,11 @@ router.get("/servers", async (req, res) => {
           config.api
         }&filter=addr${"\\"}` + config.server2,
     };
-    let server2Data = await axios(options).catch((reason)=> {
+    let server2Data = await axios(options).catch((reason) => {
       if (reason.response.status === 502) {
-        res.status(502).json({message:"Steam Bad Gateway"})
-      }})
+        res.status(502).json({ message: "Steam Bad Gateway" });
+      }
+    });
     return server2Data.data.response;
   }
   const server2Data = await GetSecondServerData();
@@ -86,10 +88,11 @@ router.get("/ports", async (req, res) => {
           config.api
         }&filter=addr${"\\"}` + config.server1,
     };
-    let server1Data = await axios(options).catch((reason)=> {
+    let server1Data = await axios(options).catch((reason) => {
       if (reason.response.status === 502) {
-        res.status(502).json({message:"Steam Bad Gateway"})
-      }})
+        res.status(502).json({ message: "Steam Bad Gateway" });
+      }
+    });
     return server1Data.data.response;
   }
   const server1Data = await GetFirstServerData();
@@ -113,10 +116,11 @@ router.get("/ports", async (req, res) => {
           config.api
         }&filter=addr${"\\"}` + config.server2,
     };
-    let server2Data = await axios(options).catch((reason)=> {
+    let server2Data = await axios(options).catch((reason) => {
       if (reason.response.status === 502) {
-        res.status(502).json({message:"Steam Bad Gateway"})
-      }})
+        res.status(502).json({ message: "Steam Bad Gateway" });
+      }
+    });
     return server2Data.data.response;
   }
   const server2Data = await GetSecondServerData();
@@ -149,10 +153,11 @@ router.get("/counts", async (req, res) => {
           config.api
         }&filter=addr${"\\"}` + config.server1,
     };
-    let server1Data = await axios(options).catch((reason)=> {
+    let server1Data = await axios(options).catch((reason) => {
       if (reason.response.status === 502) {
-        res.status(502).json({message:"Steam Bad Gateway"})
-      }})
+        res.status(502).json({ message: "Steam Bad Gateway" });
+      }
+    });
     return server1Data.data.response;
   }
   const server1Data = await GetFirstServerData();
@@ -178,10 +183,11 @@ router.get("/counts", async (req, res) => {
           config.api
         }&filter=addr${"\\"}` + config.server2,
     };
-    let server2Data = await axios(options).catch((reason)=> {
+    let server2Data = await axios(options).catch((reason) => {
       if (reason.response.status === 502) {
-        res.status(502).json({message:"Steam Bad Gateway"})
-      }})
+        res.status(502).json({ message: "Steam Bad Gateway" });
+      }
+    });
     return server2Data.data.response;
   }
   const server2Data = await GetSecondServerData();
