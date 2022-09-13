@@ -14,13 +14,12 @@ router.get("/servers", async (req, res) => {
           config.api
         }&filter=addr${"\\"}` + config.server1,
     };
-    let server1Data = await axios(options).catch((reason) => {
-      if (reason.response.status === 502) {
-        return res.status(502).json({ message: "Steam Bad Gateway" });
-      }
-    });
-      return server1Data?.data.response;
-    
+    let server1Data = await axios(options);
+    if (server1Data) {
+      return server1Data.data.response;
+    } else {
+      return res.status(408).json({ message: "Api Down" });
+    }
   }
   const server1Data = await GetFirstServerData();
   if (!server1Data.servers)
@@ -45,12 +44,12 @@ router.get("/servers", async (req, res) => {
           config.api
         }&filter=addr${"\\"}` + config.server2,
     };
-    let server2Data = await axios(options).catch((reason) => {
-      if (reason.response.status === 502) {
-        return res.status(502).json({ message: "Steam Bad Gateway" });
-      }
-    });
-    return server2Data?.data.response;
+    let server2Data = await axios(options);
+    if (server2Data) {
+      return server2Data.data.response;
+    } else {
+      return res.status(408).json({ message: "Api Down" });
+    }
   }
   const server2Data = await GetSecondServerData();
   if (!server2Data.servers)
@@ -89,12 +88,13 @@ router.get("/ports", async (req, res) => {
           config.api
         }&filter=addr${"\\"}` + config.server1,
     };
-    let server1Data = await axios(options).catch((reason) => {
-      if (reason.response.status === 502) {
-        return res.status(502).json({ message: "Steam Bad Gateway" });
-      }
-    });
-    return server1Data?.data.response;
+    let server1Data = await axios(options)
+    if(server1Data){
+      return server1Data.data.response;
+    }else{
+      return res.status(408).json({message: "Api Down"})
+    }
+      
   }
   const server1Data = await GetFirstServerData();
   if (!server1Data.servers)
@@ -117,12 +117,13 @@ router.get("/ports", async (req, res) => {
           config.api
         }&filter=addr${"\\"}` + config.server2,
     };
-    let server2Data = await axios(options).catch((reason) => {
-      if (reason.response.status === 502) {
-        return res.status(502).json({ message: "Steam Bad Gateway" });
-      }
-    });
-    return server2Data?.data.response;
+    let server2Data = await axios(options)
+    if(server2Data){
+      return server2Data.data.response;
+    }else{
+      return res.status(408).json({message: "Api Down"})
+    }
+      
   }
   const server2Data = await GetSecondServerData();
   if (!server2Data.servers)
@@ -154,13 +155,13 @@ router.get("/counts", async (req, res) => {
           config.api
         }&filter=addr${"\\"}` + config.server1,
     };
-    let server1Data = await axios(options).catch((reason) => {
-      if (reason.response.status === 502) {
-        return res.status(502).json({ message: "Steam Bad Gateway" });
-      }
-    });
-    return server1Data?.data.response;
-    
+    let server1Data = await axios(options)
+    if(server1Data){
+      return server1Data.data.response;
+    }else{
+      return res.status(408).json({message: "Api Down"})
+    }
+      
   }
   const server1Data = await GetFirstServerData();
   if (!server1Data.servers)
@@ -185,13 +186,13 @@ router.get("/counts", async (req, res) => {
           config.api
         }&filter=addr${"\\"}` + config.server2,
     };
-    let server2Data = await axios(options).catch((reason) => {
-      if (reason.response.status === 502) {
-        return res.status(502).json({ message: "Steam Bad Gateway" });
-      }
-    });
-    return server2Data?.data.response;
-
+    let server2Data = await axios(options)
+    if(server2Data){
+      return server2Data.data.response;
+    }else{
+      return res.status(408).json({message: "Api Down"})
+    }
+      
   }
   const server2Data = await GetSecondServerData();
   if (!server2Data.servers)
