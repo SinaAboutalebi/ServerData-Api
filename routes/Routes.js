@@ -19,7 +19,12 @@ router.get("/servers", async (req, res) => {
         res.status(502).json({ message: "Steam Bad Gateway" });
       }
     });
-    return server1Data.data.response;
+    if (!server1Data) {
+      res.status(408).json({ message: "Request Time Out" });
+    }else{
+      return server1Data.data.response;
+    }
+    
   }
   const server1Data = await GetFirstServerData();
   if (!server1Data.servers)
@@ -49,7 +54,11 @@ router.get("/servers", async (req, res) => {
         res.status(502).json({ message: "Steam Bad Gateway" });
       }
     });
+    if (!server2Data) {
+      res.status(408).json({ message: "Request Time Out" });
+    }else{
     return server2Data.data.response;
+    }
   }
   const server2Data = await GetSecondServerData();
   if (!server2Data.servers)
@@ -93,7 +102,11 @@ router.get("/ports", async (req, res) => {
         res.status(502).json({ message: "Steam Bad Gateway" });
       }
     });
+    if (!server1Data) {
+      res.status(408).json({ message: "Request Time Out" });
+    }else{
     return server1Data.data.response;
+    }
   }
   const server1Data = await GetFirstServerData();
   if (!server1Data.servers)
@@ -121,7 +134,11 @@ router.get("/ports", async (req, res) => {
         res.status(502).json({ message: "Steam Bad Gateway" });
       }
     });
+    if (!server2Data) {
+      res.status(408).json({ message: "Request Time Out" });
+    }else{
     return server2Data.data.response;
+    }
   }
   const server2Data = await GetSecondServerData();
   if (!server2Data.servers)
@@ -158,7 +175,11 @@ router.get("/counts", async (req, res) => {
         res.status(502).json({ message: "Steam Bad Gateway" });
       }
     });
+    if (!server1Data) {
+      res.status(408).json({ message: "Request Time Out" });
+    }else{
     return server1Data.data.response;
+    }
   }
   const server1Data = await GetFirstServerData();
   if (!server1Data.servers)
@@ -188,7 +209,11 @@ router.get("/counts", async (req, res) => {
         res.status(502).json({ message: "Steam Bad Gateway" });
       }
     });
+    if (!server2Data) {
+      res.status(408).json({ message: "Request Time Out" });
+    }else{
     return server2Data.data.response;
+    }
   }
   const server2Data = await GetSecondServerData();
   if (!server2Data.servers)
