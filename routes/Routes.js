@@ -22,7 +22,7 @@ router.get("/servers", async (req, res) => {
     if (!server1Data) {
       res.status(408).json({ message: "Request Time Out" });
     }else{
-      return server1Data.data.response;
+      return server1Data?.data.response;
     }
     
   }
@@ -57,7 +57,7 @@ router.get("/servers", async (req, res) => {
     if (!server2Data) {
       res.status(408).json({ message: "Request Time Out" });
     }else{
-    return server2Data.data.response;
+    return server2Data?.data.response;
     }
   }
   const server2Data = await GetSecondServerData();
@@ -105,7 +105,7 @@ router.get("/ports", async (req, res) => {
     if (!server1Data) {
       res.status(408).json({ message: "Request Time Out" });
     }else{
-    return server1Data.data.response;
+    return server1Data?.data.response;
     }
   }
   const server1Data = await GetFirstServerData();
@@ -137,7 +137,7 @@ router.get("/ports", async (req, res) => {
     if (!server2Data) {
       res.status(408).json({ message: "Request Time Out" });
     }else{
-    return server2Data.data.response;
+    return server2Data?.data.response;
     }
   }
   const server2Data = await GetSecondServerData();
@@ -178,7 +178,7 @@ router.get("/counts", async (req, res) => {
     if (!server1Data) {
       res.status(408).json({ message: "Request Time Out" });
     }else{
-    return server1Data.data.response;
+    return server1Data?.data.response;
     }
   }
   const server1Data = await GetFirstServerData();
@@ -212,7 +212,7 @@ router.get("/counts", async (req, res) => {
     if (!server2Data) {
       res.status(408).json({ message: "Request Time Out" });
     }else{
-    return server2Data.data.response;
+    return server2Data?.data.response;
     }
   }
   const server2Data = await GetSecondServerData();
