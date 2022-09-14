@@ -4,7 +4,7 @@ const cors = require("cors");
 const express = require("express");
 const bodyParser = require("body-parser");
 
-const Routes = require("./routes/Routes");
+const Routes = require("./routes/index");
 
 const app = express();
 //---------------------------💔🚬 'Zer0Power 💔🚬---------------------------//
