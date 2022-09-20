@@ -14,7 +14,11 @@ async function GetFirstServerData() {
         config.api
       }&filter=addr${"\\"}` + config.server1,
   };
-  let server1Data = await axios(options);
+  try {
+    let server1Data = await axios(options);
+  } catch (error) {
+    return res.status(408).json({ message: error });
+  }
   if (server1Data.data) {
     return server1Data.data.response;
   } else {
@@ -30,7 +34,11 @@ async function GetSecondServerData() {
         config.api
       }&filter=addr${"\\"}` + config.server2,
   };
-  let server2Data = await axios(options);
+  try {
+    let server2Data = await axios(options);
+  } catch (error) {
+    return res.status(408).json({ message: error });
+  }
   if (server2Data.data) {
     return server2Data.data.response;
   } else {
