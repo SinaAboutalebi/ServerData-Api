@@ -16,13 +16,13 @@ async function GetFirstServerData() {
   };
   try {
     let server1Data = await axios(options);
+    if (server1Data.data) {
+      return server1Data.data.response;
+    } else {
+      return res.status(408).json({ message: "Api Down" });
+    }
   } catch (error) {
     return res.status(408).json({ message: error });
-  }
-  if (server1Data.data) {
-    return server1Data.data.response;
-  } else {
-    return res.status(408).json({ message: "Api Down" });
   }
 }
 //===================================================================//
@@ -36,13 +36,13 @@ async function GetSecondServerData() {
   };
   try {
     let server2Data = await axios(options);
+    if (server2Data.data) {
+      return server2Data.data.response;
+    } else {
+      return res.status(408).json({ message: "Api Down" });
+    }
   } catch (error) {
     return res.status(408).json({ message: error });
-  }
-  if (server2Data.data) {
-    return server2Data.data.response;
-  } else {
-    return res.status(408).json({ message: "Api Down" });
   }
 }
 
