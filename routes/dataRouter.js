@@ -25,7 +25,7 @@ async function getServerData(ip, port) {
 router.get("/", async (req, res) => {
   var ip = req.query.ip;
   var port = req.query.port;
-  if (!ip && !port) {
+  if (!ip || !port) {
     return res.status(400).json({ message: "Invalid query" });
   } else {
     try {
