@@ -19,10 +19,10 @@ async function GetFirstServerData() {
     if (server1Data.data) {
       return server1Data.data.response;
     } else {
-      return res.status(408).json({ message: "Api Down" });
+      return;
     }
   } catch (error) {
-    return res.status(408).json({ message: error });
+    return console.log(error);
   }
 }
 //===================================================================//
@@ -39,13 +39,12 @@ async function GetSecondServerData() {
     if (server2Data.data) {
       return server2Data.data.response;
     } else {
-      return res.status(408).json({ message: "Api Down" });
+      return;
     }
   } catch (error) {
-    return res.status(408).json({ message: error });
+    return console.log(error);
   }
 }
-
 
 //---------------------------💔🚬 'Zer0Power 💔🚬---------------------------//
 router.get("/", async (req, res) => {
