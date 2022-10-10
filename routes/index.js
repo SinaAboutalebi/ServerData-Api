@@ -11,5 +11,8 @@ router.use('/counts', countsRouter)
 const portsRouter = require('./portsRouter');
 router.use('/ports', portsRouter)
 
+const dataRouter = require('./dataRouter');
+router.use('/getData', dataRouter)
+
 module.exports = router;
 //---------------------------💔🚬 'Zer0Power 💔🚬---------------------------//
