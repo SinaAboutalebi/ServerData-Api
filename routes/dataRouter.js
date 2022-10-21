@@ -31,6 +31,7 @@ router.get("/", async (req, res) => {
     try {
       let data = await getServerData(ip, port);
       if (data) {
+        data.img = `http://cdn.0powerdev.ir/imgs/mgclient/maps/${data.map}.jpg` 
         res.status(200).json(data);
       } else {
         return res.status(404).json({ message: "Server not found" });
