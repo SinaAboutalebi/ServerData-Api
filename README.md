@@ -9,10 +9,10 @@
 
   <p align="center">
     Get CS:GO ServersList Running On VPS
-    <br />
+    <br/>
     <a href="https://github.com/Zer0Power/ServerData-Api"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
+    <br/>
+    <br/>
     <a href="https://github.com/Zer0Power/ServerData-Api">View Demo</a>
     ·
     <a href="https://github.com/Zer0Power/ServerData-Api/issues">Report Bug</a>
