@@ -62,7 +62,7 @@ To get a local copy up and running follow these simple example steps.
 
 [Steam Apis](https://steamcommunity.com/dev)
 
-2. Clone the repo
+2. Clone the repo.
    ```sh
    git clone https://github.com/Zer0Power/ServerData-Api.git
    ```
